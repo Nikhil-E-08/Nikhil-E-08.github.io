@@ -29,6 +29,15 @@ const NavBar = () => {
       <AppBar position="static" sx={{ bgcolor: "#cc5500" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
+            <Avatar
+              src={process.env.PUBLIC_URL + "/images/profile.png"}
+              alt="profile"
+              sx={{
+                mr: "10px",
+                height: "35px",
+                width: "35px",
+              }}
+            />
             <Typography
               variant="h6"
               noWrap
@@ -43,15 +52,6 @@ const NavBar = () => {
                 color: "white",
               }}
             >
-              <Avatar
-                src=".portfolio/images/profile.png"
-                alt="profile"
-                sx={{
-                  mr: "10px",
-                  height: "35px",
-                  width: "35px",
-                }}
-              />
               Nikhil Elavarasu
             </Typography>
 
