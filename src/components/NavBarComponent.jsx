@@ -10,14 +10,17 @@ import { NavLink, Outlet } from "react-router-dom";
 
 const pages = [
   {
+    id: 1,
     name: "Home",
     url: "/",
   },
   {
+    id: 2,
     name: "About",
     url: "/about",
   },
   {
+    id: 3,
     name: "Contact",
     url: "/contact",
   },
@@ -45,7 +48,6 @@ const NavBar = () => {
               href="/portfolio"
               sx={{
                 mr: 2,
-                display: { xs: "none", sm: "flex" },
                 fontFamily: "comic sans ms",
                 fontWeight: 700,
                 textDecoration: "none",
@@ -64,7 +66,7 @@ const NavBar = () => {
             >
               {pages.map((page) => (
                 <NavLink
-                  key={page.name}
+                  key={page.id}
                   to={page.url}
                   style={({ isActive }) => ({
                     backgroundColor: isActive ? "#FFE5B4" : "",
