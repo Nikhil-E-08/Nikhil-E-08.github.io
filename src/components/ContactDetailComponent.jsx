@@ -13,22 +13,22 @@ import {
 const socialMedia = [
   {
     id: 1,
-    name: LinkedIn,
+    icon: LinkedIn,
     contact: "www.linkedin.com/in/nikhil-e-956116224",
   },
   {
     id: 2,
-    name: Email,
+    icon: Email,
     contact: "nikhil882001@gmail.com",
   },
   {
     id: 3,
-    name: Call,
+    icon: Call,
     contact: "+91 9092766131",
   },
   {
     id: 4,
-    name: GitHub,
+    icon: GitHub,
     contact: "https://github.com/Nikhil-E-08",
   },
 ];
@@ -51,10 +51,10 @@ const ContactDetail = () => {
                 }}
               >
                 <TableCell component="th">
-                  <Icon component={media.name} sx={{ color: "#cc5500" }} />
+                  <Icon component={media.icon} sx={{ color: "#cc5500" }} />
                 </TableCell>
                 <TableCell align="left">
-                  <Typography variant="body">{media.contact}</Typography>
+                  <Typography variant="body1">{media.contact}</Typography>
                 </TableCell>
               </TableRow>
             ))}
