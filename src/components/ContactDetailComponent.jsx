@@ -1,6 +1,7 @@
 import { Call, Email, GitHub, LinkedIn } from "@mui/icons-material";
 import {
   Box,
+  Divider,
   Icon,
   Table,
   TableBody,
@@ -37,7 +38,7 @@ const ContactDetail = () => {
   return (
     <Box sx={{ borderStyle: "groove", p: "10px" }}>
       <Typography variant="h6">Contact Information</Typography>
-      <hr />
+      <Divider />
       <TableContainer>
         <Table>
           <TableBody>
@@ -51,7 +52,7 @@ const ContactDetail = () => {
                 }}
               >
                 <TableCell component="th">
-                  <Icon component={media.icon} sx={{ color: "#cc5500" }} />
+                  <Icon component={media.icon} color="primary" />
                 </TableCell>
                 <TableCell align="left">
                   <Typography variant="body1">{media.contact}</Typography>

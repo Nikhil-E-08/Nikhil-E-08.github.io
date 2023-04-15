@@ -61,7 +61,9 @@ const DrawerComponent = ({ pages }) => {
                   style={{
                     textDecoration: "none",
                     padding: "10px",
-                    fontFamily: "comic sans ms",
+                    fontFamily: "roboto",
+                    fontWeight: "600",
+                    color: "black",
                   }}
                   onClick={() => handleAnchor(false)}
                 >

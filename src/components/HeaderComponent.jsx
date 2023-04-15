@@ -24,7 +24,7 @@ const pages = [
 const Header = () => {
   return (
     <>
-      <AppBar position="static" sx={{ bgcolor: "#cc5500" }}>
+      <AppBar position="static">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Avatar
