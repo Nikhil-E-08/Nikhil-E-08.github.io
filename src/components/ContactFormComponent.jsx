@@ -5,7 +5,7 @@ import { useState } from "react";
 
 const mobileRegex = /^[6-9][0-9]{9}$/;
 const emailRegex = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-const nameRegex = /^[A-Za-z]+$/;
+const nameRegex = /^[A-Za-z\s]+$/;
 
 const formInitialValues = {
   name: "",
@@ -15,10 +15,10 @@ const formInitialValues = {
 };
 
 const errorInitialValues = {
-  name: null,
-  email: null,
-  mobile: null,
-  message: null,
+  name: "",
+  email: "",
+  mobile: "",
+  message: "",
 };
 
 const ContactForm = () => {
@@ -47,7 +47,7 @@ const ContactForm = () => {
         if (nameRegex.test(value) === false) {
           setError((prevState) => ({
             ...prevState,
-            [name]: "Enter in correct format",
+            [name]: "Name should contain only letters",
           }));
         } else {
           setError((prevState) => ({ ...prevState, [name]: null }));
@@ -57,7 +57,7 @@ const ContactForm = () => {
         if (emailRegex.test(value) === false) {
           setError((prevState) => ({
             ...prevState,
-            [name]: "Enter in correct format",
+            [name]: "Enter in correct mail id format",
           }));
         } else {
           setError((prevState) => ({ ...prevState, [name]: null }));
@@ -67,7 +67,7 @@ const ContactForm = () => {
         if (mobileRegex.test(value) === false) {
           setError((prevState) => ({
             ...prevState,
-            [name]: "Enter in correct format",
+            [name]: "Number should be a 10 digit number starting with 6-9",
           }));
         } else {
           setError((prevState) => ({ ...prevState, [name]: null }));
