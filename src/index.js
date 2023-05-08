@@ -7,7 +7,7 @@ import { HashRouter } from "react-router-dom";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <HashRouter basename="/portfolio">
+  <HashRouter basename="/">
     <React.StrictMode>
       <App />
     </React.StrictMode>
